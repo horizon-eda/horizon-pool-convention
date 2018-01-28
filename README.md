@@ -71,37 +71,48 @@ If you create a package, chances are that you don't need a new padstack, as the 
 1. Name the entity for the most general part it applies to. For example, do not create a entity `ATtiny24` which is implicitly also used for the ATtiny44 and ATtiny84 microcontrollers. Instead, use a name like `ATtinyX4`.
 
 ### Prefixes (reference designators)
-| A | Sub-assembly or plug-in module            |
-| --- | --- |
-| B | Battery                                   |
-| C | Capacitor                                 |
-| D | Diode                                     |
-| D | Display                                   |
-| F | Fuse                                      |
-| F | Ferrite bead                              |
-| F | Fiducial                                  |
-| F | Filter                                    |
-| H | Hardware (mounting screws, etc)           |
-| J | Jack, fixed part of a connector pair      |
-| J | Jumper / link                             |
-| K | Relay                                     |
-| L | Inductor, coil, ferrite bead              |
-| L | Loudspeaker or buzzer                     |
-| M | Motor                                     |
-| M | Microphone                                |
-| P | Plug, movable part of a connector pair    |
-| Q | Transistor                                |
-| R | Resistor                                  |
-| R | Resistor network                          |
-| R | Thermistor                                |
-| R | Varistor                                  |
-| S | Switch                                    |
-| T | Transformer                               |
-| T | Thermocouple                              |
-| T | Test point                                |
-| U | Integrated circuit (IC)                   |
-| Y | Crystal / oscillator                      |
-| Z | Zener diode                               |
+| Prefix | Symbols                                   |
+| ------ | ----------------------------------------- |
+| A      | Sub-assembly or plug-in module            |
+| AT     | Attenuatur, isolator                      |
+| B      | Blower, Motor                             |
+| BT     | Battery                                   |
+| C      | Capacitor                                 |
+| CB     | Circuit breaker                           |
+| CN     | Capacitor network                         |
+| D      | Diode, zener diode, TVS diode, DIAC       |
+| DC     | Directional coupler                       |
+| DL     | Delay line                                |
+| DS     | Display, lamp                             |
+| F      | Fuse                                      |
+| FD     | Fiducial                                  |
+| FL     | Filter                                    |
+| G      | Generator, oscillator                     |
+| H      | Hardware (mounting screws, etc.)          |
+| HY     | Circulator                                |
+| J      | Connector                                 |
+| J      | Jumper, link                              |
+| K      | Relay, Contactor                          |
+| L      | Inductor, coil, ferrite bead              |
+| LS     | Loudspeaker, buzzer                       |
+| M      | Meter                                     |
+| MG     | Motor-generator                           |
+| MH     | Mounting hole                             |
+| MK     | Microphone                                |
+| MP     | Mechanical part (SMD spacer, etc.)        |
+| PS     | Power supply                              |
+| Q      | Transistor, thyristor, TRIAC              |
+| R      | Resistor                                  |
+| RN     | Resistor network                          |
+| RT     | Thermistor                                |
+| S      | Switch                                    |
+| T      | Transformer                               |
+| TC     | Thermocouple                              |
+| TP     | Test point                                |
+| U      | Integrated circuit, inseparable assembly  |
+| V      | Electron tube                             |
+| W      | Wire, cable, cable assembly               |
+| Y      | Crystal, ceramic oscillator               |
 
 ## Symbols
 1. Symbols must have one text `$REFDES` and one `$VALUE`. They both should be sized 1.5 mm.
