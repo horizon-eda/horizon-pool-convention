@@ -68,7 +68,7 @@ If you create a package, chances are that you don't need a new padstack, as the 
 3. Use parameter programs to make the padstack as generic as possible. As a minimum, solder mask expansion and paste mask contraption must be parametrised.
 
 ## Entities
-1. Name the entity for the most general part it applies to. For example, do not create a entity `ATtiny24` which is implicitly also used for the ATtiny44 and ATtiny84 microcontrollers. Instead, use a name like `ATtinyX4`.
+1. Name the entity for the most general part it applies to. For example, do not create a entity `ATtiny24` which is implicitly also used for the ATtiny44 and ATtiny84 microcontrollers. Instead, use a name like `ATtinyx4`. Unneeded suffixes can just be left out, while characters elsewhere must be replaced with a lowercase `x`.
 
 ### Prefixes (reference designators)
 | Prefix | Symbols                                   |
