@@ -91,7 +91,7 @@ If you create a package, chances are that you don't need a new padstack, as the 
 | H      | Hardware (mounting screws, etc.)          |
 | HY     | Circulator                                |
 | J      | Connector                                 |
-| J      | Jumper, link                              |
+| JP     | Jumper, solder jumper                     |
 | K      | Relay, Contactor                          |
 | L      | Inductor, coil, ferrite bead              |
 | LS     | Loudspeaker, buzzer                       |
