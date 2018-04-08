@@ -7,8 +7,11 @@ Note that, however, this convention is a *very* rough draft and far from complet
 ## Overview and general rules
 
 ### File names
-1. File are adapted versions of the pool entry's name.
-2. Do not use spaces in file names. Use a dash `-` instead. In general, use only characters from the following sets:
+1. File are adapted versions of the pool entry's name:
+    - Replace each space in the name by a underscore `_`, except for the space before a unit: `LED 5 mm` becomes `LED_5mm.json`
+    - Keep the name's capitalisation, except for the capitalisation of the first letter: `DO41` becomes `DO41.json`, but `Very special connector` becomes `very_special_connector.json`
+    - Omit parantheses: `Resistor 0402 (manual soldering)` becomes `resistor_0402_manual_soldering.json`
+2. In general, use only characters from the following sets:
     - Alphanumeric characters (`a` to `z`, `A` to `Z`, `0` to `9`)
     - Underscore `_` and dash/hyphen `-`
     - Period/dot `.`
@@ -16,6 +19,8 @@ Note that, however, this convention is a *very* rough draft and far from complet
 ### General naming and organisation
 1. All file names, descriptions, etc. must be in English
 2. Avoid plural forms. For example, a folder with diode library entries should be called `diode` and not `diodes`.
+3. Use a point `.` as a decimal separator. Do not use a thousand's separator.
+4. The first letter of each name must be capitalised
 
 ## Parts
 1. Parts should be named for the exact MPN (manufacturer part number). Use the exact spelling from the "ordering information" section of the device's datasheet.
@@ -26,11 +31,28 @@ Note that, however, this convention is a *very* rough draft and far from complet
 ## Packages
 
 ### Naming and folder structure
+Names follow a simple structure, which is best observed with some examples:
+- `DIP8, 7.62 mm lead span, 2.54 mm pitch`
+- `DIP16, 7.62 mm lead span, 2.54 mm pitch (with socket)`
+- `TO220, 5 pins (staggered pins, horizontal)`
+- `Pin header, 10 pins, 2 rows, 2.54 mm pitch`
+- `Pin header, 10 pins, 1 row, 2.54 mm pitch (horizontal)`
+
+They are composed of:
+1. A primary identification feature (like `LED` or `DIP8` or `TO220`). Note that there is no dash included (`SO8` instead od `SO-8`, etc.)
+2. An optional comma-separated list of quantitative specifiers
+    - These should be in order of decreasing importance/frequency of usage
+    - If the have a unit, include a space before the unit. Metric units are preferred when appropriate
+    - The same set of quantitative parameters must be included for all footprints of a certain type to avoid ambiguity
+    - Follow the format `<number> [unit] <parameter name>`
+3. An optional comma-separated list of qualitative modifiers in parantheses
+    - Modifiers which are standard throughout the pool must not be added (`IPC compliant`, `reflow soldering`, etc.)
+    - If the only difference a modifier makes is the 3D model of the part, it should probably not be a separate package and instead a alternate 3D model within the same part. For example `LED 5 mm (green)` and `LED 5 mm (red)` would have no difference in any PCB layer
+
+The following general rules apply:
 1. For a manufacurer-specific footprint, use the respective subfolder in `manufacturer`. Use the exact name of the package from the package or device datasheet.
-2. For generic footprints, do not include a dash after the package type (`TO`, `DIP`, `LQFP`, ...): Use `DO41` or `TO220-5` instead of `DO-41` or `TO-220-5`.
-3. When dimensions appear in the file/package name, the unit must be specified. Prefer metric units when appropriate.
-    - For the package name, place a space before the unit, like `LED 5 mm`
-    - The file name must not include spaces, e. g. write `SO8_3.2x5.7mm_P1.27mm`
+2. When naming, be verbose: do not abbreviate parameters with single letters or symbols, instead write them out
+3. No redundancy: When quantitative or qualitative parameters are reflected in the part number within the package's name (for example for connectors where the MPN distinguishes between vertical and right-angled-variants), the specifiers must not be included
 
 ### Silkscreen
 1. All silkscreen text and drawings should have a line width of 0.15 mm. Text should have a size of 1 mm.
