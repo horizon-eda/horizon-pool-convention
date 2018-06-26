@@ -26,9 +26,7 @@ Note that, however, this convention is a *very* rough draft and far from complet
 1. Parts should be named for the exact MPN (manufacturer part number). Use the exact spelling from the "ordering information" section of the device's datasheet.
 2. The `Value` field does not necessarily contain the full MPN. It should be clear from the value what the part is without occupying too much space in the schematic. For example, for a general purpose resistor the resistance is generally enough for the schematic and a `INA219AIDCNR` can be shortened to `INA219A`
 3. Include sensible information like a description. Use the manufacturer's website for the datasheet link and not a third-party datasheet site.
-4. For parts with multiple gates, make sure that exchangeable gates remain excheangable in the schematic. Don't use different symbols for the same type of gate.
-5. If a part has multiple gates, make sure that each pin is only availabe via one gate. For example, a quad opamp's 4 opamp gates must not include the power pins of the package.
-6. Use inheritance for only slightly differing parts (like different packaging, temperature range, etc.).
+4. Use inheritance for only slightly differing parts (like different packaging, temperature range, etc.).
 
 ## Packages
 
@@ -93,6 +91,8 @@ If you create a package, chances are that you don't need a new padstack, as the 
 
 ## Entities
 1. Name the entity for the most general part it applies to. For example, do not create a entity `ATtiny24` which is implicitly also used for the ATtiny44 and ATtiny84 microcontrollers. Instead, use a name like `ATtinyx4`. Unneeded suffixes can just be left out, while characters elsewhere must be replaced with a lowercase `x`.
+2. For entities with multiple gates, make sure that exchangeable gates remain excheangable in the schematic. Don't use different symbols for the same type of gate in order to include some additionial pins that could have been their own gate.
+3. If a entity has multiple gates, make sure that each pin is only availabe via one gate. For example, a quad opamp's 4 opamp gates must not include the power pins of the package because of this.
 
 ### Prefixes (reference designators)
 | Prefix | Symbols                                   |
