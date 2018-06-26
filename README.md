@@ -26,7 +26,9 @@ Note that, however, this convention is a *very* rough draft and far from complet
 1. Parts should be named for the exact MPN (manufacturer part number). Use the exact spelling from the "ordering information" section of the device's datasheet.
 2. The `Value` field does not necessarily contain the full MPN. It should be clear from the value what the part is without occupying too much space in the schematic. For example, for a general purpose resistor the resistance is generally enough for the schematic and a `INA219AIDCNR` can be shortened to `INA219A`
 3. Include sensible information like a description. Use the manufacturer's website for the datasheet link and not a third-party datasheet site.
-4. Use inheritance for only slightly differing parts (like different packaging, temperature range, etc.).
+4. For parts with multiple gates, make sure that exchangeable gates remain excheangable in the schematic. Don't use different symbols for the same type of gate.
+5. If a part has multiple gates, make sure that each pin is only availabe via one gate. For example, a quad opamp's 4 opamp gates must not include the power pins of the package.
+6. Use inheritance for only slightly differing parts (like different packaging, temperature range, etc.).
 
 ## Packages
 
