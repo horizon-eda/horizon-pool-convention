@@ -7,7 +7,7 @@ Note that, however, this convention is a *very* rough draft and far from complet
 ## Overview and general rules
 
 ### File names
-1. File are adapted versions of the pool entry's name:
+1. File names are adapted versions of the pool entry's name:
     - Replace each space in the name by a underscore `_`, except for the space before a unit: `LED 5 mm` becomes `LED_5mm.json`
     - Keep the name's capitalisation, except for the capitalisation of the first letter: `DO41` becomes `DO41.json`, but `Very special connector` becomes `very_special_connector.json`
     - Omit parantheses: `Resistor 0402 (manual soldering)` becomes `resistor_0402_manual_soldering.json`
