@@ -86,6 +86,7 @@ The following general rules apply:
 ### Copper
 1. Use the recommended footprint from the manufacturer's device or package datasheet.
 2. If there are multiple recommendations, e. g. for different soldering methods, create alternate packages.
+3. For THT components, an alternate package can be created featuring a square/rectangular pad for pin 1 identification. The main package should have identical pads as far as reasonable.
 
 ## Padstacks
 
