@@ -2,7 +2,7 @@
 
 Because Horizon's part management is based around a single pool, all parts need to follow a clear convention for a consistent look and feel. If you want to add a part to the official Horizon pool, check this convention first before submitting a pull request.
 
-Note that, however, this convention is a *very* rough draft and far from complete. Suggestions for rules are very welcome!
+Note that, however, this convention is a *very* rough draft and far from complete. Suggestions for rules are very welcome! You're also invited to take part in the discussion in the convention's repository's [GitHub issues](https://github.com/fruchti/horizon-library-convention/issues).
 
 ## Overview and general rules
 
@@ -17,14 +17,14 @@ Note that, however, this convention is a *very* rough draft and far from complet
     - Period/dot `.`
 
 ### General naming and organisation
-1. All file names, descriptions, etc. must be in English
+1. All file names, descriptions, etc. must be in English.
 2. Avoid plural forms. For example, a folder with diode library entries should be called `diode` and not `diodes`.
 3. Use a point `.` as a decimal separator. Do not use a thousand's separator.
-4. The first letter of each name must be capitalised
+4. The first letter of each name must be capitalised.
 
 ## Parts
 1. Parts should be named for the exact MPN (manufacturer part number). Use the exact spelling from the "ordering information" section of the device's datasheet.
-2. The `Value` field does not necessarily contain the full MPN. It should be clear from the value what the part is without occupying too much space in the schematic. For example, for a general purpose resistor the resistance is generally enough for the schematic and a `INA219AIDCNR` can be shortened to `INA219A`
+2. The `Value` field does not necessarily contain the full MPN. It should be clear from the value what the part is without occupying too much space in the schematic. For example, for a general purpose resistor the resistance is generally enough for the schematic and a `INA219AIDCNR` can be shortened to `INA219A`.
 3. Include sensible information like a description. Use the manufacturer's website for the datasheet link and not a third-party datasheet site.
 4. Use inheritance for only slightly differing parts (like different packaging, temperature range, etc.).
 
@@ -39,20 +39,20 @@ Names follow a simple structure, which is best observed with some examples:
 - `Pin header, 10 pins, 1 row, 2.54 mm pitch (horizontal)`
 
 They are composed of:
-1. A primary identification feature (like `LED` or `DIP8` or `TO220`). Note that there is no dash included (`SO8` instead od `SO-8`, etc.)
+1. A primary identification feature (like `LED` or `DIP8` or `TO220`). Note that there is no dash included (`SO8` instead of `SO-8`, etc.).
 2. An optional comma-separated list of quantitative specifiers
-    - These should be in order of decreasing importance/frequency of usage
-    - If the have a unit, include a space before the unit. Metric units are preferred when appropriate
-    - The same set of quantitative parameters must be included for all footprints of a certain type to avoid ambiguity
-    - Follow the format `<number> [unit] <parameter name>`
+    - These should be in order of decreasing importance/frequency of usage.
+    - If the have a unit, include a space before the unit. Metric units are preferred when appropriate.
+    - The same set of quantitative parameters must be included for all footprints of a certain type to avoid ambiguity.
+    - Follow the format `<number> [unit] <parameter name>`.
 3. An optional comma-separated list of qualitative modifiers in parantheses
-    - Modifiers which are standard throughout the pool must not be added (`IPC compliant`, `reflow soldering`, etc.)
-    - If the only difference a modifier makes is the 3D model of the part, it should probably not be a separate package and instead a alternate 3D model within the same part. For example `LED 5 mm (green)` and `LED 5 mm (red)` would have no difference in any PCB layer
+    - Modifiers which are standard throughout the pool must not be added (`IPC compliant`, `reflow soldering`, etc.).
+    - If the only difference a modifier makes is the 3D model of the part, it should probably not be a separate package and instead a alternate 3D model within the same part. For example `LED 5 mm (green)` and `LED 5 mm (red)` would have no difference in any PCB layer.
 
 The following general rules apply:
 1. For a manufacurer-specific footprint, use the respective subfolder in `manufacturer`. Use the exact name of the package from the package or device datasheet.
-2. When naming, be verbose: do not abbreviate parameters with single letters or symbols, instead write them out
-3. No redundancy: When quantitative or qualitative parameters are reflected in the part number within the package's name (for example for connectors where the MPN distinguishes between vertical and right-angled-variants), the specifiers must not be included
+2. When naming, be verbose: do not abbreviate parameters with single letters or symbols, instead write them out.
+3. No redundancy: When quantitative or qualitative parameters are reflected in the part number within the package's name (for example for connectors where the MPN distinguishes between vertical and right-angled-variants), the specifiers must not be included.
 
 ### Silkscreen
 1. All silkscreen text and drawings should have a line width of 0.15 mm. Text should have a size of 1 mm.
