@@ -54,6 +54,12 @@ The following general rules apply:
 2. When naming, be verbose: do not abbreviate parameters with single letters or symbols, instead write them out.
 3. No redundancy: When quantitative or qualitative parameters are reflected in the part number within the package's name (for example for connectors where the MPN distinguishes between vertical and right-angled-variants), the specifiers must not be included.
 
+### General package conventions
+1. The origin of the package should be in the middle of the component body for both SMT and THT packages. Exceptions to this are:
+    - If a specific origin for pick and place is defined in the component datasheet, it should be used.
+    - If the part is electro-mechanical and a different footprint anchor simplifies the placement during the PCB design, it should be adapted accordingly. For example, it makes sense to have a potentiometer's or rotary encoder's origin exactly at the center of its axis.
+    - Edge aligned connectors should have their origin on the PCB edge.
+
 ### Silkscreen
 1. All silkscreen text and drawings should have a line width of 0.15 mm. Text should have a size of 1 mm.
 2. The silkscreen layer must contain a reference designator (`$RD`). This should be the only text on the silkscreen layer.
