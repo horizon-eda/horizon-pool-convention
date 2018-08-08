@@ -73,15 +73,14 @@ The following general rules apply:
 3. The courtyard must not intersect with itself at any courtyard expansion. If this happens, the courtyard polygon is probably too complex and can be simplified.
 
 ### Package layer
-1. The package layer has to contain the physical size of the part as a polygon or shape.
+1. The package layer has to contain the physical size of the part as a polygon.
 2. Further annotations must not be added.
 3. Use a line width of 0 mm.
 
 ### Assembly layer
-1. The assembly layer is similar to the package layer in that it is based on the physical outline of the part.
-2. Use a line width of 0 mm for drawings and text.
-3. The assembly layer must include a pin 1 designator in the form of a bevelled corner (if pin 1 is in a corner) or a triangular "dent" (if pin 1 is on an edge). This marking should be 1.2 mm.
-4. Include a text `$RD`. This text should be rotated along the component width. The text's origin should be placed on a line along the component's height in the assembly layer, so that the text lies within the component outline.
+1. The assembly layer is similar to the package layer in that it contains a polygon based on the physical outline of the part.
+2. The assembly layer must include a pin 1 designator in the form of a bevelled corner (if pin 1 is in a corner) or a triangular "dent" (if pin 1 is on an edge). This marking should be 1.2 mm.
+3. Include a text `$RD`. This text should be rotated along the component width. The text's origin should be placed on a line along the component's height in the assembly layer, so that the text lies within the component outline.
 
 ### Copper
 1. Use the recommended footprint from the manufacturer's device or package datasheet.
