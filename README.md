@@ -80,7 +80,7 @@ The following general rules apply:
 ### Assembly layer
 1. The assembly layer is similar to the package layer in that it contains a polygon based on the physical outline of the part.
 2. The assembly layer must include a pin 1 designator in the form of a bevelled corner (if pin 1 is in a corner) or a triangular "dent" (if pin 1 is on an edge). This marking should be normally 1.2 mm large, but maximally half the length of the shorter adjacent side.
-3. Include a text `$RD`. This text should be rotated along the component width. The text's origin should be placed on a line along the component's height in the assembly layer, so that the text lies within the component outline.
+3. Include a text `$RD`. This text should be rotated along the component width. The text's origin should be placed on a line along the component's height in the assembly layer, preferably across from the pin 1 marker. The text should have a size of 1 mm, except for small packages, where the size should be decreased in 0.1 mm steps until a reference designator with 4 numerical digits fits within the assembly polygon.
 
 ### Copper
 1. Use the recommended footprint from the manufacturer's device or package datasheet.
