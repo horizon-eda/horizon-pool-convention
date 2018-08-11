@@ -10,7 +10,7 @@ Note that, however, this convention is a *very* rough draft and far from complet
 1. File names are adapted versions of the pool entry's name:
     - Replace each space in the name by a underscore `_`, except for the space before a unit: `LED 5 mm` becomes `LED_5mm.json`
     - Keep the name's capitalisation, except for the capitalisation of the first letter: `DO41` becomes `DO41.json`, but `Very special connector` becomes `very_special_connector.json`
-    - Omit parantheses: `Resistor 0402 (manual soldering)` becomes `resistor_0402_manual_soldering.json`
+    - Omit parentheses: `Resistor 0402 (manual soldering)` becomes `resistor_0402_manual_soldering.json`
 2. In general, use only characters from the following sets:
     - Alphanumeric characters (`a` to `z`, `A` to `Z`, `0` to `9`)
     - Underscore `_` and dash/hyphen `-`
@@ -45,12 +45,12 @@ They are composed of:
     - If the have a unit, include a space before the unit. Metric units are preferred when appropriate.
     - The same set of quantitative parameters must be included for all footprints of a certain type to avoid ambiguity.
     - Follow the format `<number> [unit] <parameter name>`.
-3. An optional comma-separated list of qualitative modifiers in parantheses
+3. An optional comma-separated list of qualitative modifiers in parentheses
     - Modifiers which are standard throughout the pool must not be added (`IPC compliant`, `reflow soldering`, etc.).
     - If the only difference a modifier makes is the 3D model of the part, it should probably not be a separate package and instead a alternate 3D model within the same part. For example `LED 5 mm (green)` and `LED 5 mm (red)` would have no difference in any PCB layer.
 
 The following general rules apply:
-1. For a manufacurer-specific footprint, use the respective subfolder in `manufacturer`. Use the exact name of the package from the package or device datasheet.
+1. For a manufacturer-specific footprint, use the respective subfolder in `manufacturer`. Use the exact name of the package from the package or device datasheet.
 2. When naming, be verbose: do not abbreviate parameters with single letters or symbols, instead write them out.
 3. No redundancy: When quantitative or qualitative parameters are reflected in the part number within the package's name (for example for connectors where the MPN distinguishes between vertical and right-angled-variants), the specifiers must not be included.
 
@@ -96,15 +96,15 @@ If you create a package, chances are that you don't need a new padstack, as the 
 3. Use parameter programs to make the padstack as generic as possible. As a minimum, solder mask expansion and paste mask contraption must be parametrised.
 
 ## Entities
-1. Name the entity for the most general part it applies to. For example, do not create a entity `ATtiny24` which is implicitly also used for the ATtiny44 and ATtiny84 microcontrollers. Instead, use a name like `ATtinyx4`. Unneeded suffixes can just be left out, while characters elsewhere must be replaced with a lowercase `x`.
-2. For entities with multiple gates, make sure that exchangeable gates remain excheangable in the schematic. Don't use different symbols for the same type of gate in order to include some additionial pins that could have been their own gate.
-3. If a entity has multiple gates, make sure that each pin is only availabe via one gate. For example, a quad opamp's 4 opamp gates must not include the power pins of the package because of this.
+1. Name the entity for the most general part it applies to. For example, do not create a entity `ATtiny24` which is implicitly also used for the ATtiny44 and ATtiny84 microcontrollers. Instead, use a name like `ATtinyx4`. Unneeded suffixes can just be left out, while characters elsewhere must be replaced with a lower-case `x`.
+2. For entities with multiple gates, make sure that exchangeable gates remain exchangeable in the schematic. Don't use different symbols for the same type of gate in order to include some additional pins that could have been their own gate.
+3. If a entity has multiple gates, make sure that each pin is only available via one gate. For example, a quad opamp's 4 opamp gates must not include the power pins of the package because of this.
 
 ### Prefixes (reference designators)
 | Prefix | Symbols                                   |
 | ------ | ----------------------------------------- |
 | A      | Sub-assembly or plug-in module            |
-| AT     | Attenuatur, isolator                      |
+| AT     | Attenuator, isolator                      |
 | B      | Blower, Motor                             |
 | BT     | Battery                                   |
 | C      | Capacitor                                 |
