@@ -99,6 +99,8 @@ If you create a package, chances are that you don't need a new padstack, as the 
 1. Name the entity for the most general part it applies to. For example, do not create a entity `ATtiny24` which is implicitly also used for the ATtiny44 and ATtiny84 microcontrollers. Instead, use a name like `ATtinyx4`. Unneeded suffixes can just be left out, while characters elsewhere must be replaced with a lower-case `x`.
 2. For entities with multiple gates, make sure that exchangeable gates remain exchangeable in the schematic. Don't use different symbols for the same type of gate in order to include some additional pins that could have been their own gate.
 3. If a entity has multiple gates, make sure that each pin is only available via one gate. For example, a quad opamp's 4 opamp gates must not include the power pins of the package because of this.
+4. If there is only a single gate, name it `Main`.
+5. A power gate should be named `Power`.
 
 ### Prefixes (reference designators)
 | Prefix | Symbols                                   |
