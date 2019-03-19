@@ -1,8 +1,8 @@
-# Horizon Library Convention
+# Horizon Pool Convention
 
 Because Horizon's part management is based around a single pool, all parts need to follow a clear convention for a consistent look and feel. If you want to add a part to the official Horizon pool, check this convention first before submitting a pull request.
 
-Note that, however, this convention is a *very* rough draft and far from complete. Suggestions for rules are very welcome! You're also invited to take part in the discussion in the convention's repository's [GitHub issues](https://github.com/fruchti/horizon-library-convention/issues).
+Note that, however, this convention is a *very* rough draft and far from complete. Suggestions for rules are very welcome! You're also invited to take part in the discussion in the convention's repository's [GitHub issues](https://github.com/fruchti/horizon-pool-convention/issues).
 
 ## Overview and general rules
 
@@ -18,7 +18,7 @@ Note that, however, this convention is a *very* rough draft and far from complet
 
 ### General naming and organisation
 1. All file names, descriptions, etc. must be in English.
-2. Avoid plural forms. For example, a folder with diode library entries should be called `diode` and not `diodes`.
+2. Avoid plural forms. For example, a folder with diode pool entries should be called `diode` and not `diodes`.
 3. Use a point `.` as a decimal separator. Do not use a thousand's separator.
 4. The first letter of each name must be capitalised.
 
