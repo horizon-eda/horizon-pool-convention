@@ -112,7 +112,7 @@ If you create a package, chances are that you don't need a new padstack, as the 
 | C      | Capacitor                                 |
 | CB     | Circuit breaker                           |
 | CN     | Capacitor network                         |
-| D      | Diode, zener diode, TVS diode, DIAC       |
+| D      | Diode, zener diode, TVS diode, DIAC, LED  |
 | DC     | Directional coupler                       |
 | DL     | Delay line                                |
 | DS     | Display, lamp                             |
