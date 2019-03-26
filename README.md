@@ -156,10 +156,11 @@ If you create a package, chances are that you don't need a new padstack, as the 
 
 ### General symbols (ICs, etc.)
 1. Group pins by function, not by pin number. For example, a LED driver's SPI pins should be placed next to each other, even if they are far apart on the physical device.
-2. Make sure that pin names do not collide. Consider all alternate pin names.
-3. Use pin decorations (clock, inverted, etc.) only for digital pins.
-4. Do not use a "inverted" decoration for pins whose name already indicates inversion (`n` or `/` in front, overbar, etc.)
-5. The symbol must have a border around it. the `$REFDES` text is to be placed above the border, `$VALUE` below. All other text must be within the border.
+2. If the unit has alternate pin names or using custom pin names is reasonable (e.g. for connectors), enable the "can expand" setting, so users can prevent colliding pin names in their schematics regardless of pin name length.
+3. Consider only the default pin names for the symbol width. Do not make the symbol wide enough to accommodate all possibilities; instead, use the "can expand" setting to let the user choose the width.
+4. Use pin decorations (clock, inverted, etc.) only for digital pins.
+5. Do not use a "inverted" decoration for pins whose name already indicates inversion (`n` or `/` in front, overbar, etc.)
+6. The symbol must have a border around it. the `$REFDES` text is to be placed above the border, `$VALUE` below. All other text must be within the border.
 
 ## Units
 1. Use the pin names exactly like they are written in the device's datasheet.
