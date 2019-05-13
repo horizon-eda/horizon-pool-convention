@@ -9,7 +9,7 @@ convention first before submitting a pull request.
 Note that, however, this convention is a *very* rough draft and far from
 complete. Suggestions for rules are very welcome! You’re also invited to
 take part in the discussion in the convention’s repository’s `GitHub
-issues <https://github.com/fruchti/horizon-pool-convention/issues>`__.
+issues <https://github.com/horizon-eda/horizon-pool-convention/issues>`__.
 
 Overview and general rules
 --------------------------
