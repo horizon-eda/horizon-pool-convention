@@ -280,8 +280,9 @@ Symbols
 
 1. Symbols must have one text ``$REFDES`` and one ``$VALUE``. They both
    should be sized 1.5 mm.
-2. Use names as generic as possible (cf. entities).
-3. All pin connection points must be on the 1.25 mm grid and at the
+2. Ensure that a multi-line ``$VALUE`` is displayed without overlapping.
+3. Use names as generic as possible (cf. entities).
+4. All pin connection points must be on the 1.25 mm grid and at the
    outside of the symbol.
 
 Discrete components
