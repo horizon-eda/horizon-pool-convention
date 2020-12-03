@@ -152,8 +152,8 @@ Courtyard
 2. The courtyard polygon must be parametrised by the courtyard expansion
    parameter with a parameter program.
 3. The courtyard must not intersect with itself at any courtyard
-   expansion. If this happens, the courtyard polygon is probably too
-   complex and can be simplified.
+   expansion. In other words, the courtyard must be convex. Otherwise,
+   the courtyard polygon is too complex and must be simplified.
 
 Package layer
 ~~~~~~~~~~~~~
