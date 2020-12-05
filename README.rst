@@ -206,7 +206,7 @@ create a new padstack, take the following rules into account:
 2. Draw the necessary shapes/polygons in all layers, not just the copper
    layer.
 3. Use parameter programs to make the padstack as generic as possible.
-   As a minimum, solder mask expansion and paste mask contraption must
+   As a minimum, solder mask expansion and paste mask contraction must
    be parametrised.
 
 Entities
