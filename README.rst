@@ -107,9 +107,17 @@ The following general rules apply:
 1. For a manufacturer-specific footprint, use the respective subfolder
    in ``manufacturer``. Use the exact name of the package from the
    package or device datasheet.
-2. When naming, be verbose: do not abbreviate parameters with single
+2. If manufacturers disagree on some dimension of the package body or
+   land pattern for a package of the same name, consider the package
+   manufacturer-specific and place it in the ``manufacturer``
+   subfolder. If the majority of other manufacturers agree, their
+   variant can be considered a generic footprint (with the same name).
+   For example, there can be both ``manufacturer/stm/TSSOP20`` and
+   ``ic/smd/tssop/TSSOP20`` if STMicroelectronics’s TSSOP-20 drawings
+   are different from all other manufacturers’.
+3. When naming, be verbose: do not abbreviate parameters with single
    letters or symbols, instead write them out.
-3. No redundancy: When quantitative or qualitative parameters are
+4. No redundancy: When quantitative or qualitative parameters are
    reflected in the part number within the package’s name (for example
    for connectors where the MPN distinguishes between vertical and
    right-angled-variants), the specifiers must not be included.
