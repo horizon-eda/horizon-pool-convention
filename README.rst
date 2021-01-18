@@ -48,7 +48,7 @@ Parts
 -----
 
 1. Parts should be named for the exact MPN (manufacturer part number).
-   Use the exact spelling from the “ordering information” section of the
+   Use the exact spelling from the ‘ordering information’ section of the
    device’s datasheet.
 2. The ``Value`` field does not necessarily contain the full MPN. It
    should be clear from the value what the part is without occupying too
@@ -174,7 +174,7 @@ Assembly layer
 1. The assembly layer is similar to the package layer in that it
    contains a polygon based on the physical outline of the part.
 2. The assembly layer must include a pin 1 designator in the form of a
-   bevelled corner (if pin 1 is in a corner) or a triangular “dent” (if
+   bevelled corner (if pin 1 is in a corner) or a triangular ‘dent’ (if
    pin 1 is on an edge). This marking should be normally 1.2 mm large,
    but maximally half the length of the shorter adjacent side.
 3. Include a text ``$RD``. This text should be rotated along the
@@ -300,14 +300,14 @@ General symbols (ICs, etc.)
    driver’s SPI pins should be placed next to each other, even if they
    are far apart on the physical device.
 2. If the unit has alternate pin names or using custom pin names is
-   reasonable (e.g. for connectors), enable the “can expand” setting, so
+   reasonable (e.g. for connectors), enable the ‘can expand’ setting, so
    users can prevent colliding pin names in their schematics regardless
    of pin name length.
 3. Consider only the default pin names for the symbol width. Do not make
    the symbol wide enough to accommodate all possibilities; instead, use
-   the “can expand” setting to let the user choose the width.
+   the ‘can expand’ setting to let the user choose the width.
 4. Use pin decorations (clock, inverted, etc.) only for digital pins.
-5. Do not use a “inverted” decoration for pins whose name already
+5. Do not use a ‘inverted’ decoration for pins whose name already
    indicates inversion (``n`` or ``/`` in front, overbar, etc.)
 6. The symbol must have a border around it. the ``$REFDES`` text is to
    be placed above the border, ``$VALUE`` below. All other text must be
