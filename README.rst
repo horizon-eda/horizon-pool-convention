@@ -312,6 +312,9 @@ General symbols (ICs, etc.)
 6. The symbol must have a border around it. the ``$REFDES`` text is to
    be placed above the border, ``$VALUE`` below. All other text must be
    within the border.
+7. Power pins should be on the top and bottom of the symbol box. Use the
+   ‘perpendicular’ name orientation unless this forces the symbol to be
+   unreasonably wide. Prefer a uniform spacing of power pins.
 
 Units
 -----
