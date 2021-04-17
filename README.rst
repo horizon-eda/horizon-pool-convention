@@ -142,8 +142,9 @@ Silkscreen
 
 1. All silkscreen text and drawings should have a line width of 0.15 mm.
    Text should have a size of 1 mm.
-2. The silkscreen layer must contain a reference designator (``$RD``).
-   This should be the only text on the silkscreen layer.
+2. The silkscreen layer must contain a reference designator (``$RD``)
+   near pin 1 of the package. This should be the only text on the
+   silkscreen layer.
 3. Silkscreen must not intersect with pads or package. All silkscreen
    has to be visible after assembly.
 4. Silkscreen text and drawings must have a clearance of 0.2 mm to
