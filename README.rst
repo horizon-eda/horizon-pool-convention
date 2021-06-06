@@ -290,6 +290,9 @@ Symbols
 3. Use names as generic as possible (cf. entities).
 4. All pin connection points must be on the 1.25 mm grid and at the
    outside of the symbol.
+5. Junctions in internal schematics must be a polygon circle with
+   0.35 mm diameter. Use the ‘Place dot’ tool in the symbol editor to
+   insert a correctly-sized junction dot.
 
 Discrete components
 ~~~~~~~~~~~~~~~~~~~
