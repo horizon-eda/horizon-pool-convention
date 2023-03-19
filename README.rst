@@ -109,10 +109,10 @@ The following general rules apply:
    package or device datasheet.
 2. If manufacturers disagree on some dimension of the package body or
    land pattern for a package of the same name, consider the package
-   manufacturer-specific and place it in the ``manufacturer``
-   subfolder. If the majority of other manufacturers agree, their
-   variant can be considered a generic footprint (with the same name).
-   For example, there can be both ``manufacturer/stm/TSSOP20`` and
+   manufacturer-specific and place it in the ``manufacturer`` subfolder.
+   If the majority of other manufacturers agree, their variant can be
+   considered a generic footprint (with the same name). For example,
+   there can be both ``manufacturer/stm/TSSOP20`` and
    ``ic/smd/tssop/TSSOP20`` if STMicroelectronics’s TSSOP-20 drawings
    are different from all other manufacturers’.
 3. When naming, be verbose: do not abbreviate parameters with single
