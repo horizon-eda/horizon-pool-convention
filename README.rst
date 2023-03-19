@@ -223,15 +223,24 @@ Entities
    the ATtiny44 and ATtiny84 microcontrollers. Instead, use a name like
    ``ATtinyx4``. Unneeded suffixes can just be left out, while
    characters elsewhere must be replaced with a lower-case ``x``.
-2. For entities with multiple gates, make sure that exchangeable gates
+2. Entities should be split up into multiple units if
+
+   -  they have more than 100 pins (e.g. split up FPGAs into IO banks,
+      but not smaller microcontrollers into IO ports),
+   -  it is mostly of little importance which physical IC a gate is in
+      (e.g. split up multi-gate logic ICs), or
+   -  separate placement of units often greatly improves schematic
+      clarity (can e.g. make sense for electro-mechanical parts).
+
+3. For entities with multiple gates, make sure that exchangeable gates
    remain exchangeable in the schematic. Don’t use different symbols for
    the same type of gate in order to include some additional pins that
    could have been their own gate.
-3. If a entity has multiple gates, make sure that each pin is only
+4. If a entity has multiple gates, make sure that each pin is only
    available via one gate. For example, a quad opamp’s 4 opamp gates
    must not include the power pins of the package because of this.
-4. If there is only a single gate, name it ``Main``.
-5. A power gate should be named ``Power``.
+5. If there is only a single gate, name it ``Main``.
+6. A power gate should be named ``Power``.
 
 Prefixes (reference designators)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
