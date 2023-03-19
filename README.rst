@@ -20,7 +20,7 @@ File names
 1. File names are adapted versions of the pool entry’s name:
 
    -  Replace each space in the name by a underscore ``_``, except for
-      the space before a unit: ``LED 5 mm`` becomes ``LED_5mm.json``
+      the space before a unit: ``LED 5 mm`` becomes ``LED_5mm.json``
    -  Keep the name’s capitalisation, except for the capitalisation of
       the first letter: ``DO41`` becomes ``DO41.json``, but
       ``Very special connector`` becomes ``very_special_connector.json``
@@ -99,7 +99,7 @@ They are composed of:
    -  If the only difference a modifier makes is the 3D model of the
       part, it should probably not be a separate package and instead a
       alternate 3D model within the same part. For example
-      ``LED 5 mm (green)`` and ``LED 5 mm (red)`` would have no
+      ``LED 5 mm (green)`` and ``LED 5 mm (red)`` would have no
       difference in any PCB layer.
 
 The following general rules apply:
@@ -140,14 +140,14 @@ General package conventions
 Silkscreen
 ~~~~~~~~~~
 
-1. All silkscreen text and drawings should have a line width of 0.15 mm.
-   Text should have a size of 1 mm.
+1. All silkscreen text and drawings should have a line width of 0.15 mm.
+   Text should have a size of 1 mm.
 2. The silkscreen layer must contain a reference designator (``$RD``)
    near pin 1 of the package. This should be the only text on the
    silkscreen layer.
 3. Silkscreen must not intersect with pads or package. All silkscreen
    has to be visible after assembly.
-4. Silkscreen text and drawings must have a clearance of 0.2 mm to
+4. Silkscreen text and drawings must have a clearance of 0.2 mm to
    package outline and copper layer.
 5. A pin 1 indicator is established by extension of an existing outline
    or by omitting a line. Do not use a dot or text or any other marking.
@@ -156,7 +156,7 @@ Courtyard
 ~~~~~~~~~
 
 1. The courtyard polygon is the hull around package body and pads. This
-   means that at a courtyard expansion if 0 mm, the courtyard polygon
+   means that at a courtyard expansion if 0 mm, the courtyard polygon
    touches the outermost pad outlines/package outlines.
 2. The courtyard polygon must be parametrised by the courtyard expansion
    parameter with a parameter program.
@@ -167,7 +167,7 @@ Package layer
 1. The package layer has to contain the physical size of the part as a
    polygon.
 2. Further annotations must not be added.
-3. Use a line width of 0 mm.
+3. Use a line width of 0 mm.
 
 Assembly layer
 ~~~~~~~~~~~~~~
@@ -176,13 +176,13 @@ Assembly layer
    contains a polygon based on the physical outline of the part.
 2. The assembly layer must include a pin 1 designator in the form of a
    bevelled corner (if pin 1 is in a corner) or a triangular ‘dent’ (if
-   pin 1 is on an edge). This marking should be normally 1.2 mm large,
+   pin 1 is on an edge). This marking should be normally 1.2 mm large,
    but maximally half the length of the shorter adjacent side.
 3. Include a text ``$RD``. This text should be rotated along the
    component width. The text’s origin should be placed on a line along
    the component’s height in the assembly layer, preferably across from
-   the pin 1 marker. The text should have a size of 1 mm, except for
-   small packages, where the size should be decreased in 0.1 mm steps
+   the pin 1 marker. The text should have a size of 1 mm, except for
+   small packages, where the size should be decreased in 0.1 mm steps
    until a reference designator with 4 numerical digits fits within the
    assembly polygon.
 
@@ -285,13 +285,13 @@ Symbols
 -------
 
 1. Symbols must have one text ``$REFDES`` and one ``$VALUE``. They both
-   should be sized 1.5 mm.
+   should be sized 1.5 mm.
 2. Ensure that a multi-line ``$VALUE`` is displayed without overlapping.
-3. Use names as generic as possible (cf. entities).
-4. All pin connection points must be on the 1.25 mm grid and at the
+3. Use names as generic as possible (cf. entities).
+4. All pin connection points must be on the 1.25 mm grid and at the
    outside of the symbol.
 5. Junctions in internal schematics must be a polygon circle with
-   0.35 mm diameter. Use the ‘Place dot’ tool in the symbol editor to
+   0.35 mm diameter. Use the ‘Place dot’ tool in the symbol editor to
    insert a correctly-sized junction dot.
 
 Discrete components
@@ -304,7 +304,7 @@ General symbols (ICs, etc.)
    driver’s SPI pins should be placed next to each other, even if they
    are far apart on the physical device.
 2. If the unit has alternate pin names or using custom pin names is
-   reasonable (e.g. for connectors), enable the ‘can expand’ setting, so
+   reasonable (e.g. for connectors), enable the ‘can expand’ setting, so
    users can prevent colliding pin names in their schematics regardless
    of pin name length.
 3. Consider only the default pin names for the symbol width. Do not make
